@@ -1,40 +1,3 @@
-h3 {
-  margin-top: 50px;
-}
-
-.submission {
-  width: 100%;
-}
-
-.submission textarea {
-  width: 100%;
-  height: auto;
-}
-
-.button {
-  border: 1px solid #444;
-  padding: 15px;
-  width: 100px;
-  cursor: pointer;
-}
-
-.errors {
-  display: none;
-  background-color: red;
-  color: white;
-  text-align: center;
-  padding: 5px;
-}
-
-.button:hover {
-  color: #FCFAF8;
-  background-color: #444;
-}
-
-.answer {
-  display: none;
-}
-
 .node {
   stroke: #fff;
   stroke-width: 1.5px;
@@ -43,9 +6,4 @@ h3 {
 .link {
   stroke: #999;
   stroke-opacity: .6;
-}
-
-ol li {
-  font-family: 'Libre Baskerville', serif;
-  color: #444
 }

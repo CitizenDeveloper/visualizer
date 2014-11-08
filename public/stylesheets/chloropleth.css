@@ -1,0 +1,29 @@
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+.example .q0-9 { fill:rgb(247,251,255); }
+.example .q1-9 { fill:rgb(222,235,247); }
+.example .q2-9 { fill:rgb(198,219,239); }
+.example .q3-9 { fill:rgb(158,202,225); }
+.example .q4-9 { fill:rgb(107,174,214); }
+.example .q5-9 { fill:rgb(66,146,198); }
+.example .q6-9 { fill:rgb(33,113,181); }
+.example .q7-9 { fill:rgb(8,81,156); }
+.example .q8-9 { fill:rgb(8,48,107); }
+
+.answer .q0-9 { fill:rgb(155,251,247); }
+.answer .q1-9 { fill:rgb(147,235,222); }
+.answer .q2-9 { fill:rgb(139,219,189); }
+.answer .q3-9 { fill:rgb(125,202,158); }
+.answer .q4-9 { fill:rgb(114,174,107); }
+.answer .q5-9 { fill:rgb(98,146,66); }
+.answer .q6-9 { fill:rgb(81,113,33); }
+.answer .q7-9 { fill:rgb(56,81,8); }
+.answer .q8-9 { fill:rgb(7,48,8); }

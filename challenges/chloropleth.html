@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='//fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/chloropleth.css">
+  </head>
+  <body>
+    <div class="index">
+      <h1 class="center">CITIZEN DEVELOPER</h1>
+      <p class="center">Visualization Challenges</p>
+
+      <h3>SCENARIO</h3>
+      <p>
+        Student dropout rates for MOOCs have been on the rise in recent months and you call a meeting
+        to explore the issue.  Several members of your team rally around an improved student engagement strategy
+        that includes brick and mortar Learning Community Centers.  They argue that the latest student surveys point
+        to a need for building more meaningful personal relationships as part of their learning experience.
+      </p>
+      <p>
+        One of the more outspoken dissidents pushes back, reminding everyone that a core differentiator
+        of your offering is your small and growing partnership with local community centers.  In fact, she
+        posits, other research suggests that what's missing is not more human contact, but higher quality burritos.
+      </p>
+      <p>
+        Burritos, it turns out, especially those made with barbacoa, are known to release high levels of Oxytocin
+        into the bloodstream, helping to reinforce human bonding among your students.
+      </p>
+      <p>
+        After some debate, the team aligns itself with this theory and you decide to plot barbacao burrito quality
+        around the country to look for correlations in rates of student attrition.
+      </p>
+      <p>
+        To this end you choose to use a heatmap, or chloropleth map, to visualize barbacoa burrito quality at the county-level across the US.  The source of the data is available through an API provided by a nationally reknown burrito chain whose slogan is "burritos as big as your cabeza".
+      </p>
+      <div class="example"></div>
+      <p class="center"><em>barbacoa burrito quality across the US, darker is yummier</em></p>
+      <p>
+      Unfortunately the API doesn't give you the right shape of data for your heatmap.
+      </p>
+      <p>
+      This challenge invites you to reshape the data returned from an unfamiliar API into something useful.
+      </p>
+      <p>
+      Good luck!
+      </p>
+      <p><a href="//docs.google.com/spreadsheets/d/1j9UIWI-GfqwKiyNBRIGLcTh8g9lg8bXbS8-TV8DBOZ8/edit#gid=0">Link to Data</a></p>
+      <h3>DESIRED OUTPUT</h3>
+      <p>
+        Ideally, the data will be in a simple CSV with two columns: id and rate.
+        <em>Id</em> is the FIPS county ID, and <em>rate</em> is a percent expressed
+        as a decimal.
+      </p>
+      <pre><code>
+id,rate
+1001,0.15
+1002,0.75
+1003,0.30
+...
+      </code></pre>
+      <h3>SUBMISSION</h3>
+      <div class="submission">
+        <p class="errors">There seems to be an error with your solution</p>
+        <textarea cols="10" rows="10"></textarea>
+      </div>
+      <div class="button">Check Answer</div>
+
+      <div class="answer">
+        <h3>ANSWER</h3>
+        <p></p>
+        <div class="chart"></div>
+
+        <h3>ADDITIONAL RESOURCES</h3>
+        <ul>
+          <li>
+            <a href="//bl.ocks.org/mbostock/4060606">
+              Read more about Chloropleths
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="../public/javascripts/chloropleth.js"></script>
+  </body>
+</html>
