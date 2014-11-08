@@ -44,3 +44,8 @@ h3 {
   stroke: #999;
   stroke-opacity: .6;
 }
+
+ol li {
+  font-family: 'Libre Baskerville', serif;
+  color: #444
+}
