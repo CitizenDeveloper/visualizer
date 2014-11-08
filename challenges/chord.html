@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='//fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/chord.css">
+  </head>
+  <body>
+    <div class="index">
+      <h1 class="center">CITIZEN DEVELOPER</h1>
+      <p class="center">Visualization Challenges</p>
+
+      <h3>SCENARIO</h3>
+      <p>
+        Recently, one of our APIs suffered a service outage.  Several customers
+        were very upset, and requested that the next time an outage occurs, that
+        they are notified right away.
+      </p>
+      <p>
+        Given the sheer number of services you offer, and the number of customers
+        you have, you have decided to create a visualization that displays both
+        the customers dependent on a given service and weighs how dependent they
+        are on that service.  That way, given another crisis, you are able to
+        contact everyone using the service starting with those that depend on it
+        most heavily first.
+      </p>
+      <p>
+        A chord diagram/dependency wheel uses connection strength between entities to draw related entities closer in a visualization. To generate a chord diagram among services you offer, you request a report from your product managers. Unfortunately, the data isn't in the right shape for the chord diagram.
+      </p>
+      <div class="example"></div>
+      <p class="center"><em>Example chord diagram</em></p>
+      <p>
+        This challenge invites you to reshape the data exported so it can be rendered as a chord diagram. Once you have that diagram you'll know which customers depend on your services the most.
+      </p>
+      <p>
+        Good luck!
+      </p>
+      <p><a href="/visualizer/public/datasets/chord/features.csv">Link to exported data</a></p>
+      <h3>DESIRED OUTPUT</h3>
+      <p>
+        The chord diagram that you've chosen requires data encoded as a matrix.
+        Imagine groups along the top and bottom of the matrix, and the strength of
+        their relationships at the intersections.
+      </p>
+      <pre><code>
+  A B C D
+A 0 0 1 1
+B 0 0 0 1
+C 1 0 0 0
+D 1 1 0 0
+      </code></pre>
+      <p>
+        Our program will accept a list of smaller lists, where each smaller list
+        is a row of the matrix:
+      </p>
+      <pre><code>
+[
+  [0,0,1,1],
+  [0,0,0,1],
+  [1,0,0,0],
+  [1,1,0,0],
+  ...
+]
+      </code></pre>
+      <h3>SUBMISSION</h3>
+      <div class="submission">
+        <p class="errors">There seems to be an error with your solution</p>
+        <textarea cols="10" rows="10"></textarea>
+      </div>
+      <div class="button">Check Answer</div>
+
+      <div class="answer">
+        <h3>ANSWER</h3>
+        <p>Hover over a ring to identify its dependencies</p>
+        <div class="chart"></div>
+
+        <h3>ADDITIONAL RESOURCES</h3>
+        <ul>
+          <li>
+            <a href="//circos.ca/guide/tables/">
+              Circos walkthrough
+            </a>
+          </li>
+          <li>
+            <a href="//bl.ocks.org/mbostock/4062006">
+              Read more about d3 chord diagrams
+            </a>
+          </li>
+          <li>
+            <a href="//www.redotheweb.com/DependencyWheel/">
+              Read more about dependency wheels
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../public/javascripts/lib/d3.v3.min.js"></script>
+    <script src="../public/javascripts/lib/dependency_wheel.js"></script>
+    <script src="../public/javascripts/chord.js"></script>
+  </body>
+</html>

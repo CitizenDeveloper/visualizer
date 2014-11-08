@@ -1,0 +1,17 @@
+feature,customer,using service or not
+Internal API,Apple,no
+Internal API,Exxon,yes
+Internal API,Boeing,yes
+Internal API,NASA,yes
+External API,Apple,yes
+External API,Exxon,no
+External API,Boeing,yes
+External API,NASA,yes
+Website,Apple,yes
+Website,Exxon,no
+Website,Boeing,yes
+Website,NASA,yes
+Course API,Apple,yes
+Course API,Exxon,no
+Course API,Boeing,yes
+Course API,NASA,yes
