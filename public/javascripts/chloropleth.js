@@ -78,6 +78,6 @@ $(document).ready(function() {
     d3.select(self.frameElement).style("height", height + "px");
   }
 
-  populateAnswer('/public/datasets/chloropleth/burrito.csv', '.chart', 700, 300, .80)
-  populateAnswer('/public/datasets/chloropleth/unemployment.csv', '.example', 700, 300, 0.15)
+  populateAnswer('/public/datasets/chloropleth/burrito.csv', '.example', 700, 300, .50)
+  populateAnswer('/public/datasets/chloropleth/unemployment.csv', '.chart', 700, 300, 0.15)
 })

@@ -1,0 +1,37 @@
+{
+  'AL':[
+    {'county_id': 1001, 'burrito_quality': 0.097},
+    {'county_id': 1005, 'burrito_quality': 0.134},
+    {'county_id': 1007, 'burrito_quality': 0.121}
+  ],
+  'AK':[
+    {'county_id': 1009, 'burrito_quality': 0.099},
+    {'county_id': 1011, 'burrito_quality': 0.164},
+    {'county_id': 1013, 'burrito_quality': 0.167}
+  ],
+  'AZ':[
+    {'county_id': 1015, 'burrito_quality': 0.108},
+    {'county_id': 1017, 'burrito_quality': 0.186},
+    {'county_id': 1019, 'burrito_quality': 0.118},
+  ],
+  'AR':[
+    {'county_id': 1021, 'burrito_quality': 0.99},
+    {'county_id': 1023, 'burrito_quality': 0.127},
+    {'county_id': 1025, 'burrito_quality': 0.17},
+  ],
+  'CA':[
+    {'county_id': 1027, 'burrito_quality': 0.127},
+    {'county_id': 1029, 'burrito_quality': 0.104},
+    {'county_id': 1031, 'burrito_quality': 0.085},
+  ],
+  'CO':[
+    {'county_id': 1033, 'burrito_quality': 0.114},
+    {'county_id': 1035, 'burrito_quality': 0.195},
+    {'county_id': 1037, 'burrito_quality': 0.14},
+  ],
+  'CT':[
+    {'county_id': 1039, 'burrito_quality': 0.101},
+    {'county_id': 1041, 'burrito_quality': 0.097},
+    {'county_id': 1043, 'burrito_quality': 0.096},
+  ]
+}
