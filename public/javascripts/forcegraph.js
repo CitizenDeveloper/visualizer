@@ -82,13 +82,27 @@ $(document).ready(function() {
   }
 
   var graph = {
-    "nodes": [
-      {"name": "a", "group": 1},
-      {"name": "b", "group": 2}
+    "nodes" : [
+      {"name" : "Cindy", "group" : 1},
+      {"name" : "Jonathan", "group" : 2},
+      {"name" : "Marilyn", "group" : 2},
+      {"name" : "Mark", "group" : 2},
+      {"name" : "Robert", "group" : 1},
+      {"name" : "Exxon Mobil", "group" : 3},
+      {"name" : "Valero Energy", "group" : 3},
+      {"name" : "General Electric", "group" : 3},
+      {"name" : "Apple", "group" : 3}
     ],
-    "links": [
-      {"source": 0, "target": 1, "value": 8},
-      {"source": 1, "target": 0, "value": 5}
+    "links" : [
+      {"source" : 0, "target" : 5 , "value" : 1},
+      {"source" : 1, "target" : 6 , "value" : 6},
+      {"source" : 2, "target" : 7 , "value" : 1},
+      {"source" : 2, "target" : 5 , "value" : 1},
+      {"source" : 0, "target" : 7 , "value" : 2},
+      {"source" : 1, "target" : 7 , "value" : 3},
+      {"source" : 2, "target" : 8 , "value" : 4},
+      {"source" : 1, "target" : 5 , "value" : 2},
+      {"source" : 0, "target" : 8 , "value" : 1}
     ]
   }
 
