@@ -54,7 +54,7 @@ $(document).ready(function() {
         .attr("height", height);
 
     queue()
-        .defer(d3.json, 'visualizer/public/datasets/chloropleth/us.json')
+        .defer(d3.json, '../public/datasets/chloropleth/us.json')
         .defer(d3.csv, pathname, function(d) {
           rateById.set(d.id, +d.rate);
         })
@@ -78,6 +78,6 @@ $(document).ready(function() {
     d3.select(self.frameElement).style("height", height + "px");
   }
 
-  populateAnswer('visualizer/public/datasets/chloropleth/burrito.csv', '.example', 700, 300, .50)
-  populateAnswer('visualizer/public/datasets/chloropleth/unemployment.csv', '.chart', 700, 300, 0.15)
+  populateAnswer('../public/datasets/chloropleth/burrito.csv', '.example', 700, 300, .50)
+  populateAnswer('../public/datasets/chloropleth/unemployment.csv', '.chart', 700, 300, 0.15)
 })
