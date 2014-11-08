@@ -44,8 +44,11 @@ ul {
 
 ul li {
   list-style: none;
-  display: inline-block;
   margin: 10px;
+}
+
+.inline li {
+  display: inline-block;
 }
 
 ul li img {
