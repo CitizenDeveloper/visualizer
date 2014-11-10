@@ -41,7 +41,7 @@ $(document).ready(function() {
     return true
   }
 
-  function executeMatchTree() {
+  function executeMatchTree(selector, pathName, labels) {
     /* Wimbledon 2012 - Match Tree */
     /* Copyright 2013 Peter Cook (@prcweb); Licensed MIT */
 
@@ -91,7 +91,8 @@ $(document).ready(function() {
     }
 
     function result(d) {
-      var m = d.match;
+      return fullname(d);
+      var m = d.name;
       var res = '';
       if(m !== undefined) {
         for(var i=1; i<=5; i++) {
@@ -107,31 +108,34 @@ $(document).ready(function() {
       d3.selectAll('g#player-labels text')
         .style('fill', 'white');
 
+      $('#result p').html(d.name);
+
       // Highlight this player + children
       d3.select('g#player-labels text.'+c+'.round-'+d.round)
         .style('fill', 'yellow');
 
-      if(d.round != 1) {
-        c = surname(d.children[0]);
-        d3.select('g#player-labels text.'+c+'.round-'+ +(d.round-1))
-          .style('fill', 'yellow');
+      // if(d.round != 1) {
+      //   c = surname(d.children[0]);
+      //   d3.select('g#player-labels text.'+c+'.round-'+ +(d.round-1))
+      //     .style('fill', 'yellow');
 
-        c = surname(d.children[1]);
-        d3.select('g#player-labels text.'+c+'.round-'+ +(d.round-1))
-          .style('fill', 'yellow');
-      }
+      //   c = surname(d.children[1]);
+      //   d3.select('g#player-labels text.'+c+'.round-'+ +(d.round-1))
+      //     .style('fill', 'yellow');
 
-      var m = d.match;
-      if(m !== undefined) {
-        d3.select('#result').text(fullname(d.children[0]) + ' beat ' + fullname(d.children[1]));
-        d3.select('#score').text(result(d));
-      }
+      // }
+
+      // var m = d.match;
+      // if(m !== undefined) {
+      //   d3.select('#result').text(fullname(d.children[0]) + ' beat ' + fullname(d.children[1]));
+      //   d3.select('#score').text(result(d));
+      // }
     }
 
     var xCenter = radius, yCenter = radius;
-    var svg = d3.select('svg').append('g').attr('transform', translateSVG(xCenter,yCenter));
+    var svg = d3.select(selector + ' svg').append('g').attr('transform', translateSVG(xCenter,yCenter));
 
-    d3.json('../public/datasets/match_tree/wimbledon.json', function(err, root) {
+    d3.json(pathName, function(err, root) {
       var chart = svg.append('g');
       chart.datum(root).selectAll('g')
         .data(partition.nodes)
@@ -147,7 +151,7 @@ $(document).ready(function() {
         .on('mouseover', playerHover);
 
       // Round labels
-      var rounds = ['Round 1', 'Round 2', 'Round 3', 'Round 4', 'Quarter finals', 'Semi finals', 'Final'];
+      var rounds = labels;
       var roundLabels = svg.append('g').attr('id', 'round-labels');
       roundLabels.selectAll('path')
         .data(rounds)
@@ -183,5 +187,14 @@ $(document).ready(function() {
     });
   }
 
-  executeMatchTree()
+  executeMatchTree(
+    '.example',
+    '../public/datasets/match_tree/wimbledon.json',
+    ['Round 1', 'Round 2', 'Round 3', 'Round 4', 'Quarter finals', 'Semi finals', 'Final']
+  )
+  executeMatchTree(
+    '.answer',
+    '../public/datasets/match_tree/burrito.json',
+    ['Round 1', '', 'Round 2', '', 'Round 3', '', 'Final']
+  )
 })

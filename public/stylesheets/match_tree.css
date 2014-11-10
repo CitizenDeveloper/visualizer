@@ -1,15 +1,22 @@
-.example {
+.example, .chart {
   padding-left: 50px;
 }
-.example svg {
+.svg {
   width: 600px;
   height: 600px;
   font-family: helvetica, sans-serif;
 }
 
-path, line {
+.example path, .example line {
   fill: #225D23;
   stroke: #eee;
+  stroke-width: 0.5px;
+  cursor: pointer;
+}
+
+.answer path, .answer line {
+  fill: #BF2806;
+  stroke: #F2DC6D;
   stroke-width: 0.5px;
   cursor: pointer;
 }
@@ -33,10 +40,8 @@ text {
 }
 
 #result {
-  position: absolute;
-  left: 680px;
-  top: 20px;
-  width: 400px;
+  text-align: center;
+  color: #444;
   font-size: 18px;
   font-weight: 200;
 }
