@@ -58,7 +58,7 @@ ul li img {
 }
 
 ul li img:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .footer {
@@ -106,4 +106,12 @@ h3 {
 ol li {
   font-family: 'Libre Baskerville', serif;
   color: #444
+}
+
+.locked:hover {
+  background-image: url('/visualizer/public/images/lock.png');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: 50% 50%;
+  background-size: 100px 100px;
 }

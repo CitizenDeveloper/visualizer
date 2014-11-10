@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='//fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/match_tree.css">
+  </head>
+  <body>
+    <div class="index">
+      <h1 class="center">CITIZEN DEVELOPER</h1>
+      <p class="center">Visualization Challenges</p>
+
+      <h3>SCENARIO</h3>
+      <p>
+        Where can I get the best burrito in the United States?  The fine folks over
+        at <a href="//fivethirtyeight.com/burrito/">FiveThirtyEight</a> have gathered
+        the data for us.  Let's see if we can visualize it with a tree.
+      </p>
+      <div class="example"><svg></svg></div>
+      <p class="center"><em>Example match tree for Wimbledon</em></p>
+      <p>The diagram above was rendered from this
+        <a href="/visualizer/public/datasets/match_tree/wimbledon_full.csv">data</a>,
+        which was obtained from this <a href="//www.tennis-data.co.uk/wimbledon.php">site</a>.
+        Take notice of the shape of the data:
+      </p>
+      <pre><code>
+WTA,Location,Tournament,Date,Tier,Court,Surface,...
+33,London,Wimbledon,24/06/13,Grand Slam,Outdoor,Grass,...
+33,London,Wimbledon,24/06/13,Grand Slam,Outdoor,Grass,...
+33,London,Wimbledon,24/06/13,Grand Slam,Outdoor,Grass,...
+      </code></pre>
+      <p>
+        Notice how it differs from the shape of the data used to generate the tree:
+      </p>
+      <pre><code>
+{
+  "name": "Murray A.",
+  "round": 8,
+  "children": [
+    {
+      "name": "Murray A.",
+      "round": 7,
+      "children": [
+        {
+          "name": "Murray A.",
+          "round": 6,
+          "children": [
+            ...
+          ],
+          "match": {
+            "w1": 6,
+            "w2": 6,
+            "w3": 7
+          }
+        }
+      ],
+      "match": {
+        "w1": 7,
+        "w2": 4,
+        "w3": 7
+      }
+    }
+  ],
+  "match": {
+    "w1": 6,
+    "w2": 7,
+    "w3": 6
+  }
+}
+      </code></pre>
+      <p>
+        FiveThirtyEight's burrito data is not yet available on their
+        <a href="//github.com/fivethirtyeight/data">github repo</a>, so we've
+        scraped the data from their site, and are providing it to you in
+        standard CSV format.
+      </p>
+      <p>
+        <a href="/visualizer/public/datasets/match_tree/burrito_bracket.csv">Burrito CSV</a>
+      </p>
+      <p>
+        This challenge invites you to reshape the scraped data so it can be rendered as a tree. Once you have that diagram, everyone will know what burrito is the best.
+      </p>
+      <p>
+        Good luck!
+      </p>
+      <h3>DESIRED OUTPUT</h3>
+      <p>
+        The tree that you've chosen requires data encoded as JSON.
+      </p>
+      <pre><code>
+{
+  "name": "La Taqueria",
+  "round": 4,
+  "children": [
+    {
+      "name": "La Taqueria",
+      "round": 3,
+      "children": [
+        {
+          "name": "La Taqueria",
+          "round": 2,
+          "children": [
+            {
+              "name": "La Taqueria",
+              "round": 1,
+              "children": []
+            },
+            {
+              "name": "Dos Chinos",
+              "round": 1,
+              "children": []
+            },
+            ...
+            ...
+          ]
+        },
+        {
+          "name": "Cabo Bob’s Burritos",
+          "round": 2,
+          "children": [
+            ...
+            ...
+            ...
+            ...
+          ]
+        },
+        ...
+        ...
+      ]
+    },
+    ...
+    ...
+    ...
+  ]
+}
+      </code></pre>
+      <h3>SUBMISSION</h3>
+      <div class="submission">
+        <p class="errors">There seems to be an error with your solution</p>
+        <textarea cols="10" rows="10"></textarea>
+      </div>
+      <div class="button">Check Answer</div>
+
+      <div class="answer">
+        <h3>ANSWER</h3>
+        <div class="chart"></div>
+
+        <h3>ADDITIONAL RESOURCES</h3>
+        <ul>
+          <li>
+            <a href="//wimbledon.prcweb.co.uk/matchtree.html">
+              Peter Cook's Wimbledon Match Tree
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../public/javascripts/lib/d3.v3.min.js"></script>
+    <script src="../public/javascripts/match_tree.js"></script>
+  </body>
+</html>
