@@ -12,18 +12,13 @@ $(document).ready(function() {
   function validResponse() {
     try {
       var submission = $('textarea').val()
-        , matrix = JSON.parse(submission)
+        , tree = JSON.parse(submission)
 
       if (!(
-        matrix.length === 8    && matrix.constructor === Array &&
-        matrix[0].length === 8 && matrix[0].constructor === Array &&
-        matrix[1].length === 8 && matrix[1].constructor === Array &&
-        matrix[2].length === 8 && matrix[2].constructor === Array &&
-        matrix[3].length === 8 && matrix[3].constructor === Array &&
-        matrix[4].length === 8 && matrix[4].constructor === Array &&
-        matrix[5].length === 8 && matrix[5].constructor === Array &&
-        matrix[6].length === 8 && matrix[6].constructor === Array &&
-        matrix[7].length === 8 && matrix[7].constructor === Array
+        hasAttributes(tree, ['name', 'round', 'children']) &&
+        tree.children.constructor === Array &&
+        tree.children.length === 4 &&
+        hasAttributes(tree.children[0], ['name', 'round', 'children'])
       )) {
         throw 'Incorrect'
       }
