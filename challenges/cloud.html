@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='//fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/cloud.css">
+  </head>
+  <body>
+    <div class="index">
+      <h1 class="center">CITIZEN DEVELOPER</h1>
+      <p class="center">Visualization Challenges</p>
+
+      <h3>SCENARIO</h3>
+      <p>
+      </p>
+      <div class="example"></div>
+      <p class="center"><em>Here's a word cloud of this page</em></p>
+      <p>
+        This challenge invites you to reshape the data exported so it can be rendered as a word cloud. Once you have that diagram you'll better understand what language to use when conversing with your customers.
+      </p>
+      <p>
+        Good luck!
+      </p>
+      <p><a href="/visualizer/public/datasets/cloud/paragraph.txt">Here's a sample of our customer's language usage.</a></p>
+      <h3>DESIRED OUTPUT</h3>
+      <p>
+        The word cloud that you've chosen requires data encoded as an array, or
+        list, of JSON objects, or dictionaries, each with the value of the word
+        and the frequency of the words occurrence.  The final output of which, will
+        look something like this:
+      </p>
+      <pre><code>
+[{word: "this", count: 24}, {word: "bananas", count: 18}, ...]
+      </code></pre>
+      <p>
+        Thankfully, our talented developers are willing to take this transformation
+        that last mile for us.  They're even willing to remove punctuation.  All
+        they ask is that we take the paragraph of text we want parsed, and turn
+        it into an array:
+      </p>
+      <pre><code>
+["this", "is", "an", "example", ...]
+      </code></pre>
+      <h3>SUBMISSION</h3>
+      <div class="submission">
+        <p class="errors">There seems to be an error with your solution</p>
+        <textarea cols="10" rows="10"></textarea>
+      </div>
+      <div class="button">Check Answer</div>
+
+      <div class="answer">
+        <h3>ANSWER</h3>
+        <div class="chart"></div>
+
+        <h3>ADDITIONAL RESOURCES</h3>
+        <ul>
+          <li>
+            <a href="//www.jasondavies.com/wordcloud/#%2F%2Fwww.jasondavies.com%2Fwordtree%2Fcat-in-the-hat.txt">
+              Jason Davies original implementation
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../public/javascripts/lib/d3.v3.min.js"></script>
+    <script src="../public/javascripts/lib/d3.layout.cloud.js"></script>
+    <script src="../public/javascripts/cloud.js"></script>
+  </body>
+</html>
